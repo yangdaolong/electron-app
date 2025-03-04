@@ -15,6 +15,15 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
-    plugins: [vue()]
+    plugins: [vue()],
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://10.20.3.52:24000', //访问地址
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
+    }
   }
 })

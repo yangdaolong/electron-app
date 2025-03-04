@@ -6,7 +6,7 @@ import { AppRoutes } from './routes'
 import { beforeEach, afterEach } from './guards'
 
 const router = createRouter({
-  history: createWebHistory(), //hash模式
+  history: createWebHashHistory(), //hash模式
   routes: AppRoutes
 })
 

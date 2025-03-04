@@ -1,5 +1,5 @@
 {
-  "name": "electron-app",
+  "name": "etest",
   "version": "1.0.0",
   "description": "An Electron application with Vue and TypeScript",
   "main": "./out/main/index.js",
@@ -23,6 +23,8 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
+    "pinia": "^3.0.1",
+    "pinia-plugin-persist": "^1.0.0",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
@@ -44,5 +46,14 @@
     "vite": "^5.0.12",
     "vue": "^3.4.15",
     "vue-tsc": "^1.8.27"
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "win": {
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "icon": "build/icon.icns"
+    }
   }
 }
