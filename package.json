@@ -48,9 +48,17 @@
     "vue-tsc": "^1.8.27"
   },
   "build": {
-    "appId": "com.example.yourapp",
     "win": {
-      "icon": "build/icon.ico"
+      "icon": "build/icon.ico",
+      "requestedExecutionLevel": "highestAvailable",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
     },
     "mac": {
       "icon": "build/icon.icns"
