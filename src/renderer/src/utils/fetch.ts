@@ -1,7 +1,7 @@
 const api = 'http://10.20.3.52:24000/'
 // const api = '/api/'
 
-export async function get(url, params: any) {
+export async function get(url, params: never) {
   const queryString = Object.keys(params)
     .map((key) => `${key}=${encodeURIComponent(params[key])}`)
     .join('&')
@@ -20,7 +20,7 @@ export async function get(url, params: any) {
   }
 }
 
-export async function post(url: string, params: any) {
+export async function post(url: string, params: never) {
   const res = await fetch(`${api}${url}`, {
     method: 'POST',
     headers: {
